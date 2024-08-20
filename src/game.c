@@ -1,6 +1,4 @@
 #include "game.h"
-#include <X11/Xlib.h>
-#include <stdio.h>
 
 U32 seed = 0;
 
