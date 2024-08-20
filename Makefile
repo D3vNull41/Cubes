@@ -1,6 +1,6 @@
 # Determine the compiler and linker
 CC     = $(shell which gcc)
-CFLAGS = -Wall -Werror -Wextra -Wpedantic -std=c99 -Iinclude -I /usr/include/freetype2
+CFLAGS = -Wall -Werror -Wextra -Wpedantic -std=c99 -Iinclude -I/usr/include/freetype2
 LDFLAGS = -Wl,-z,relro,-z,now
 LIBS = -lX11 -lXft
 
@@ -12,9 +12,8 @@ BASENAME = Cubes
 BINDIR = bin
 OUTPUT = $(BINDIR)/$(BASENAME)
 
-
 STRIP = $(shell which strip)
-STRIP_FLAGS = --strip-all --remove-section=.comment --remove-section=.note # make the binary smaler
+STRIP_FLAGS = --strip-all --remove-section=.comment --remove-section=.note # make the binary smaller
 
 # Source and Object files
 SRCS = $(wildcard $(SRCDIR)/*.c)
@@ -55,3 +54,10 @@ clean:
 run: $(BINDIR)/$(BASENAME)
 	./$(BINDIR)/$(BASENAME)
 
+# Build release target
+.PHONY: build-release
+build-release: clean release
+
+# Build debug target
+.PHONY: build-debug
+build-debug: clean debug

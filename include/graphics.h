@@ -1,5 +1,5 @@
-#ifndef GRAPHICS_H
-#define GRAPHICS_H
+#ifndef __GRAPHICS_H
+#define __GRAPHICS_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,5 +19,5 @@ void draw_start_screen(XWindow *xw, XftFont *fontText, XftFont *fontHeadlines);
 void draw_end_screen(XWindow *xw, XftFont *fontText, XftFont *fontHeadlines);
 void draw_board(XWindow *xw, GameBoard *board, XftFont *scoreFont) ;
 void draw_tetromino(Display *display, Window window, GC gc, Tetromino *tetromino);
-#endif // GRAPHICS_H
+#endif // __GRAPHICS_H
 

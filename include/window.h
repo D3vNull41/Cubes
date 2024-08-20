@@ -1,5 +1,5 @@
-#ifndef WINDOW_H
-#define WINDOW_H
+#ifndef __WINDOW_H
+#define __WINDOW_H
 
 #include <stdio.h>
 #include <X11/Xlib.h>
@@ -13,5 +13,5 @@ extern Atom wm_delete_window;
 
 I8 init_main_window(Display *display, Window window, XIM *xim, XIC *xic);
 
-#endif // WINDOW_H
+#endif // __WINDOW_H
 

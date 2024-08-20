@@ -1,5 +1,5 @@
-#ifndef INPUT_H
-#define INPUT_H
+#ifndef __INPUT_H
+#define __INPUT_H
 
 #include <stdio.h>
 #include <X11/Xlib.h>
@@ -11,5 +11,5 @@
 
 bool recv_events(Display *display, XIC xic, char *keyBuf, U32 mousePos[2]);
 
-#endif // INPUT_H
+#endif // __INPUT_H
 
