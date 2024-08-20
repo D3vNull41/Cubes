@@ -1,5 +1,4 @@
 #include "graphics.h"
-#include <X11/Xlib.h>
 
 /**
  * @brief Initializes the graphical context for the XWindow.
