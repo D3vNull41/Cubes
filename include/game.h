@@ -2,6 +2,7 @@
 #define __GAME_H
 #include <stdio.h>
 #include <stdlib.h>
+#include <X11/Xlib.h>
 #include "typedef.h"
 #include "window.h" // for window width and height
 #include "graphics.h"
