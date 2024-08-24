@@ -1,3 +1,5 @@
+/// \file
+
 #include "graphics.h"
 
 /**

@@ -46,19 +46,27 @@ typedef enum {
 } GameState;
 
 /* Game visuals */
+/**
+ * @brief The game state of the 
+ * 
+ */
 typedef struct {
-	U8 **state;
-	U32 level;
-	U64 score;
-	U64 highscore;
+	U8 **state;		///< The game board 2d array state[x][y] where the cubes are placed (0: no cube 1: cube)
+	U32 level;		///< The current level the user is at
+	U64 score;		///< The current score for the round
+	U64 highscore;	///< The highest score in all rounds (in one execution [currently])
 } GameBoard;
 
+/**
+ * @brief The struct for the current playable Tetromino
+ * 
+ */
 typedef struct {
-	U8 rotationState;
-	U16 rotations[4];
-	U16 X;
-	U16 Y;
-	U32 color;
+	U8 rotationState;	///< The current Rotation out of the 4 possible 90° rotations
+	U16 rotations[4];	///< All possible rotations (precomputed)
+	U16 X;				///< The X position on the window (in px)
+	U16 Y;				///< The Y position on the window (in px)
+	U32 color;			///< The color of this tetromino as RGB val
 } Tetromino;
 
 /* movement */

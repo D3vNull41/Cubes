@@ -1,3 +1,5 @@
+/// \file
+
 #include "game.h"
 
 U32 seed = 0;
